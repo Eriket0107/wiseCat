@@ -1,23 +1,14 @@
-// const body = document.getElementById('img-phrases'); 
-window.addEventListener("load", function Listener() {
-    setTimeout(() => {
-        apiPhrase()
-    }, 750);
-    apiImg();
-});
-
 const apiPhrase = async () => {
     const response = await fetch('https://api.adviceslip.com/advice', {
         method: 'GET'
-    })
+    });
     const JSON = await response.json();
     const {
         advice
     } = JSON.slip;
-    const paragraph = document.getElementById('p');
-    paragraph.innerHTML = `"${advice}"`;
     console.log(advice);
-    console.log(JSON)
+    console.log(JSON);
+    return advice;
 };
 
 const apiImg = async () => {
@@ -28,12 +19,25 @@ const apiImg = async () => {
     const {
         url
     } = JSON[0];
-    document.getElementById('img').src = url;
     console.log(JSON[0])
+    return url;
 }
 
+const printInfo = (url, advice) => {
+    const paragraph = document.getElementById('p');
+    paragraph.innerHTML = `"${advice}"`;
+    console.log(advice);
+
+    document.getElementById('img').src = url;
+    console.log(url);
+    console.log("url", url);
+};
+
 const button = document.getElementById('btn')
-button.addEventListener('click', () => {
-    location.href = './index2.html'
-})
-// <onerror="this.onerror=null; this.src='./wisegoat/imgs/bodezinho.png>
+
+button.addEventListener("click", listner = async () =>{
+    const url =  await apiImg();
+    const advice =  await apiPhrase();
+    printInfo(url, advice);
+});
+

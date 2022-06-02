@@ -1,3 +1,12 @@
 Wise
 Goat
 Pedir Conselho
+
+
+// button.addEventListener('click', Promise.all([apiImg(), apiPhrase()])
+//     .then((values) => {
+//         const url = apiImg();
+//         const advice = apiPhrase();
+//         printInfo(url, advice);
+//         console.log(values)
+//     }));
