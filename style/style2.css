@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#body {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+    margin: 1rem;
+}
+
+#img {
+    max-width: 50%;
+    height: auto;
+    margin-left: 7rem;
+}
+
+body #text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0.5rem;
+}
+
+#text h1 {
+    font-size: 5rem;
+    color: #e65a0c;
+}
+
+#text h2 {
+    font-size: 2rem;
+    color: #BAA193;
+}
+
+#img-phrases {
+    width: 60vw;
+    height: auto;
+    background-color: #BAA193;;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between  
+}
+#img-phrases p{
+    margin-top: 2rem;
+    margin-left: 3rem;
+}
+#img-phrases #img{
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+#p {
+    font-size: 3.25rem;
+    color: #e65a0c;
+    overflow: auto;
+}
+body #btn {
+    display: flex;
+    position: absolute;
+    bottom:5vh;
+    margin: 0.5rem;
+    margin-top: 1rem
+}
+#btn{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.75rem;
+    color:white;
+    padding: 1.25rem;
+    border: 0;
+    border-radius: 0.75rem;
+    background-color:  #e65a0c;   
+}
+#btn:hover{
+    background-color:  #ff5c04;
+    transition: 0.1s;
+    transform: scale(1.05);
+    cursor: pointer;
+}  
