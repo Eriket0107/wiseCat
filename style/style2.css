@@ -45,11 +45,12 @@ body #text {
 
 #img-phrases {
     width: 60vw;
-    height: auto;
-    background-color: #BAA193;;
+    height: 50vh;
+    background-color: #BAA193;
     border-radius: 1rem;
     display: flex;
-    justify-content: space-between  
+    justify-content: space-between;  
+    overflow: auto;
 }
 #img-phrases p{
     margin-top: 2rem;
